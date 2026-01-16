@@ -1,12 +1,226 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Arya Designs</title>
-  </head>
-  <body style="font-family: Arial; padding:40px;">
-    <h1>Arya Designs is LIVE ✅</h1>
-    <p>If you can see this, GitHub Pages is working correctly.</p>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Arya Designs | Drafting, Council & Construction Drawings</title>
+
+  <meta name="description" content="Arya Designs provides floor plans, council approval drawings, town planning permits, 3D renders, site & landscape plans, and working drawings for construction." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* ===== CTA STYLES ===== */
+    .cta-fixed {
+      position: fixed;
+      bottom: 16px;
+      right: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 9999;
+    }
+    .cta-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 18px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 14px;
+      color: #fff;
+      text-decoration: none;
+      box-shadow: 0 12px 30px rgba(0,0,0,.25);
+    }
+    .cta-call { background:#0f172a; }
+    .cta-wa { background:#25D366; }
+
+    .cta-bottom {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: none;
+      gap: 0;
+      z-index: 9998;
+    }
+    .cta-bottom a {
+      flex: 1;
+      text-align: center;
+      padding: 16px;
+      font-weight: 800;
+      color: #fff;
+      text-decoration: none;
+    }
+    .cta-bottom .call { background:#0f172a; }
+    .cta-bottom .wa { background:#25D366; }
+
+    @media (max-width: 768px) {
+      .cta-fixed { display:none; }
+      .cta-bottom { display:flex; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="topbar">
+  <div class="container topbar__inner">
+    <div class="brand">
+      <span class="brand__mark">A</span>
+      <span class="brand__text">ARYA DESIGNS</span>
+    </div>
+
+    <nav class="nav">
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#contact">Get a Quote</a>
+    </nav>
+
+    <a class="btn btn--primary" href="#contact">Get a Quote</a>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- HERO -->
+  <section class="hero card">
+    <div>
+      <p class="eyebrow">DRAFTING • COUNCIL • PERMITS • 3D</p>
+      <h1>Clear drawings.<br>Faster approvals.</h1>
+      <p class="lead">
+        We help homeowners, builders and developers move projects forward
+        with accurate, council-ready documentation.
+      </p>
+
+      <div class="hero__cta">
+        <a class="btn btn--primary" href="#contact">Request a Quote</a>
+        <a class="btn btn--ghost" href="tel:DISPLAY_PHONE">Call Now</a>
+      </div>
+
+      <div class="hero__meta">
+        <div class="meta-pill">Fast turnaround</div>
+        <div class="meta-pill">Council-ready sets</div>
+        <div class="meta-pill">Revisions included</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="section">
+    <h2>Our Services</h2>
+
+    <div class="grid grid--3">
+      <div class="card card--service">
+        <h3>Floor Plans</h3>
+        <p>Accurate plans that clearly communicate layout, dimensions and intent.</p>
+        <a href="#contact">Get pricing →</a>
+      </div>
+
+      <div class="card card--service">
+        <h3>Council Approval Drawings</h3>
+        <p>Documentation prepared to support planning submissions.</p>
+        <a href="#contact">Request a quote →</a>
+      </div>
+
+      <div class="card card--service">
+        <h3>Town Planning & Permit Drawings</h3>
+        <p>Existing & proposed sets aligned with council requirements.</p>
+        <a href="#contact">Talk to us →</a>
+      </div>
+
+      <div class="card card--service">
+        <h3>3D Renders</h3>
+        <p>Visuals that help clients understand and approve designs faster.</p>
+        <a href="#contact">View options →</a>
+      </div>
+
+      <div class="card card--service">
+        <h3>Site & Landscape Plans</h3>
+        <p>Setbacks, boundaries, context and landscape layouts.</p>
+        <a href="#contact">Get started →</a>
+      </div>
+
+      <div class="card card--service">
+        <h3>Working Drawings for Construction</h3>
+        <p>Detailed drawings to help builders build accurately.</p>
+        <a href="#contact">Request a quote →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process" class="section">
+    <h2>How It Works</h2>
+
+    <div class="grid grid--4">
+      <div class="card step">
+        <div class="step__num">01</div>
+        <h3>Send Info</h3>
+        <p>Plans, photos, address & timeline.</p>
+      </div>
+      <div class="card step">
+        <div class="step__num">02</div>
+        <h3>Quote</h3>
+        <p>Clear scope & turnaround confirmed.</p>
+      </div>
+      <div class="card step">
+        <div class="step__num">03</div>
+        <h3>Draft</h3>
+        <p>First draft + revisions.</p>
+      </div>
+      <div class="card step">
+        <div class="step__num">04</div>
+        <h3>Deliver</h3>
+        <p>Final council / construction set.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <h2>Request a Quote</h2>
+    <p class="muted">Tell us about your project and we’ll respond quickly.</p>
+
+    <form class="card form" action="https://formspree.io/f/yourFormId" method="POST">
+      <input name="name" placeholder="Your name" required />
+      <input name="email" placeholder="Your email" required />
+      <select name="service" required>
+        <option value="">Select service</option>
+        <option>Floor Plans</option>
+        <option>Council Approval Drawings</option>
+        <option>Town Planning & Permit Drawings</option>
+        <option>3D Renders</option>
+        <option>Site & Landscape Plans</option>
+        <option>Working Drawings</option>
+      </select>
+      <textarea name="message" placeholder="Project details, suburb & timeline" required></textarea>
+      <button class="btn btn--primary">Send Enquiry</button>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Arya Designs</p>
+  </footer>
+
+</main>
+
+<!-- FLOATING CTA -->
+<div class="cta-fixed">
+  <a class="cta-btn cta-call" href="tel:DISPLAY_PHONE">📞 Call Now</a>
+  <a class="cta-btn cta-wa" href="https://wa.me/PHONE_NUMBER_HERE" target="_blank">💬 WhatsApp</a>
+</div>
+
+<!-- MOBILE CTA BAR -->
+<div class="cta-bottom">
+  <a class="call" href="tel:DISPLAY_PHONE">📞 Call</a>
+  <a class="wa" href="https://wa.me/PHONE_NUMBER_HERE" target="_blank">💬 WhatsApp</a>
+</div>
+
+<script src="script.js"></script>
+</body>
 </html>
