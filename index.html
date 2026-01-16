@@ -1,257 +1,327 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Arya Designs | Drafting, Council & Construction Drawings</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arya Designs | Drafting, Council & Permit Drawings</title>
+  <meta name="description" content="Boutique drafting services for Australian homeowners and builders — council-ready plans, fast turnaround, compliant documentation, 3D renders and working drawings." />
 
-  <meta name="description" content="Arya Designs provides floor plans, council approval drawings, town planning permits, 3D renders, site & landscape plans, and working drawings for construction." />
-
+  <!-- Font (optional but nice) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css" />
-
-  <style>
-    /* ===== CTA STYLES ===== */
-    .cta-fixed {
-      position: fixed;
-      bottom: 16px;
-      right: 16px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      z-index: 9999;
-    }
-    .cta-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 14px 18px;
-      border-radius: 999px;
-      font-weight: 800;
-      font-size: 14px;
-      color: #fff;
-      text-decoration: none;
-      box-shadow: 0 12px 30px rgba(0,0,0,.25);
-    }
-    .cta-call { background:#0f172a; }
-    .cta-wa { background:#25D366; }
-
-    .cta-bottom {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      display: none;
-      z-index: 9998;
-    }
-    .cta-bottom a {
-      flex: 1;
-      text-align: center;
-      padding: 16px;
-      font-weight: 900;
-      color: #fff;
-      text-decoration: none;
-    }
-    .cta-bottom .call { background:#0f172a; }
-    .cta-bottom .wa { background:#25D366; }
-
-    @media (max-width: 768px) {
-      .cta-fixed { display:none; }
-      .cta-bottom { display:flex; }
-    }
-  </style>
 </head>
 
 <body>
+  <!-- =========================
+       TOP BAR
+       ========================= -->
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <div class="brand">
+        <div class="brand__mark">A</div>
+        <span>ARYA DESIGNS</span>
+      </div>
 
-<header class="topbar">
-  <div class="container topbar__inner">
-    <div class="brand">
-      <span class="brand__mark">A</span>
-      <span class="brand__text">ARYA DESIGNS</span>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#services">Services</a>
+        <a href="#process">Process</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#about">About</a>
+      </nav>
+
+      <a class="btn btn--primary" href="#contact">Get a Quote</a>
     </div>
+  </header>
 
-    <nav class="nav">
-      <a href="#services">Services</a>
-      <a href="#process">Process</a>
-      <a href="#contact">Get a Quote</a>
-    </nav>
+  <main>
+    <!-- =========================
+         HERO (UI/UX like reference)
+         ========================= -->
+    <section class="container section" style="margin-top:32px;">
+      <div class="card hero hero--split">
+        <div>
+          <div class="eyebrow">DRAFTING • COUNCIL • PERMITS • 3D</div>
 
-    <a class="btn btn--primary" href="#contact">Get a Quote</a>
-  </div>
-</header>
+          <h1>
+            Precision Drafting for<br />
+            Australian Builders &amp;<br />
+            Homeowners
+          </h1>
 
-<main class="container">
+          <p class="lead muted">
+            Council-ready plans, fast turnarounds, and compliant documentation.
+            From renovations to new builds, we bring your vision to technical life.
+          </p>
 
-  <!-- HERO (Split layout with image) -->
-  <section class="hero hero--split card">
-    <div class="hero__content">
-      <p class="eyebrow">DRAFTING • COUNCIL • PERMITS • 3D</p>
-      <h1>Clear drawings.<br>Faster approvals.</h1>
-      <p class="lead">
-        We help homeowners, builders and developers move projects forward with accurate, council-ready documentation.
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#contact">Get a Free Quote</a>
+            <a class="btn btn--ghost" href="#portfolio">View Our Work</a>
+          </div>
+
+          <div class="hero__meta" style="margin-top:14px;">
+            <span class="meta-pill">Fast turnaround</span>
+            <span class="meta-pill">Council-ready drawings</span>
+            <span class="meta-pill">Revisions included</span>
+          </div>
+
+          <p class="muted" style="margin-top:12px;">
+            Prefer email? <a href="mailto:aryadesignsaus@gmail.com"><b>aryadesignsaus@gmail.com</b></a>
+          </p>
+
+          <div class="hero__meta" style="margin-top:14px;">
+            <span class="meta-pill"><b>100%</b> Council compliance focus</span>
+            <span class="meta-pill">Australia wide</span>
+            <span class="meta-pill">Builders + Homeowners</span>
+          </div>
+
+          <div class="hero__cta" style="margin-top:14px;">
+            <a class="btn btn--ghost" href="tel:0472611972">Call 0472 611 972</a>
+            <a class="btn btn--ghost" target="_blank" rel="noopener" href="https://wa.me/61472611972">WhatsApp</a>
+          </div>
+        </div>
+
+        <div class="hero__visual" aria-label="Hero project image">
+          <img src="assets/hero.jpg" alt="Modern Australian home design render" />
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         SERVICES
+         ========================= -->
+    <section id="services" class="container section">
+      <h2>Comprehensive Drafting Services</h2>
+      <p class="muted" style="max-width:760px; margin-top:-18px;">
+        We handle everything from early concept through to build-ready documentation,
+        so your project moves smoothly from idea → approval → construction.
       </p>
 
-      <div class="hero__cta">
-        <a class="btn btn--primary" href="#contact">Request a Quote</a>
-        <a class="btn btn--ghost" href="tel:+61472611972">Call 0472 611 972</a>
-        <a class="btn btn--ghost" href="https://wa.me/61472611972" target="_blank" rel="noopener">WhatsApp</a>
-      </div>
+      <div class="grid grid--3" style="margin-top:24px;">
+        <div class="card card--service">
+          <img src="assets/council.jpg" alt="Council approval drawings" class="service-img" />
+          <h3>Council Approval Drawings</h3>
+          <p class="muted">Compliance-ready plans prepared for DA / permit submissions.</p>
+          <a href="#contact">Learn more →</a>
+        </div>
 
-      <div class="hero__meta">
-        <div class="meta-pill">Fast turnaround</div>
-        <div class="meta-pill">Council-ready drawings</div>
-        <div class="meta-pill">Revisions included</div>
-      </div>
+        <div class="card card--service">
+          <img src="assets/redlineplan.jpg" alt="Town planning and permits" class="service-img" />
+          <h3>Town Planning &amp; Permit Drawings</h3>
+          <p class="muted">Guidance through council requirements, overlays, and documentation.</p>
+          <a href="#contact">Learn more →</a>
+        </div>
 
-      <p style="margin-top:14px;">
-        Prefer email?
-        <a href="mailto:arysdesignsaus@gmail.com"><strong>arysdesignsaus@gmail.com</strong></a>
+        <div class="card card--service">
+          <img src="assets/siteplans.jpg" alt="Working drawings for construction" class="service-img" />
+          <h3>Working Drawings for Construction</h3>
+          <p class="muted">Detailed technical documentation for builders and on-site teams.</p>
+          <a href="#contact">Learn more →</a>
+        </div>
+
+        <div class="card card--service">
+          <img src="assets/hero.jpg" alt="3D renders" class="service-img" />
+          <h3>3D Renders</h3>
+          <p class="muted">Photorealistic visuals to approve design before you build.</p>
+          <a href="#contact">Learn more →</a>
+        </div>
+
+        <div class="card card--service">
+          <img src="assets/siteplans.jpg" alt="Site and landscape plans" class="service-img" />
+          <h3>Site Plans &amp; Landscape Plans</h3>
+          <p class="muted">Setbacks, boundaries, levels, drainage and outdoor layouts.</p>
+          <a href="#contact">Learn more →</a>
+        </div>
+
+        <div class="card card--service">
+          <img src="assets/floorplans.jpg" alt="Floor plans" class="service-img" />
+          <h3>Floor Plans</h3>
+          <p class="muted">Functional, ergonomic layouts designed for modern living.</p>
+          <a href="#contact">Learn more →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         PROCESS (4-step workflow)
+         ========================= -->
+    <section id="process" class="container section">
+      <h2>Our Simple 4-Step Workflow</h2>
+      <p class="muted" style="max-width:760px; margin-top:-18px;">
+        From initial consultation to build-ready plans, we keep the process clear, fast, and transparent.
       </p>
-    </div>
 
-    <div class="hero__visual">
-      <img src="assets/hero.jpg" alt="Arya Designs drafting and design visuals" />
-    </div>
-  </section>
+      <div class="grid grid--4" style="margin-top:24px;">
+        <div class="card">
+          <div class="step__num">01</div>
+          <h3>Consultation</h3>
+          <p class="muted">We confirm your vision, site constraints, timeline and council pathway.</p>
+        </div>
 
-  <!-- SERVICES -->
-  <section id="services" class="section">
-    <h2>Our Services</h2>
+        <div class="card">
+          <div class="step__num">02</div>
+          <h3>Drafting &amp; Design</h3>
+          <p class="muted">We translate your brief into professional drawings and compliant layouts.</p>
+        </div>
 
-    <div class="grid grid--3">
-      <div class="card card--service">
-        <img class="service-img" src="assets/floorplans.jpg" alt="Floor plans" />
-        <h3>Floor Plans</h3>
-        <p>Clear, accurate floor plans that communicate layout and intent.</p>
-        <a href="#contact">Get pricing →</a>
+        <div class="card">
+          <div class="step__num">03</div>
+          <h3>Revisions</h3>
+          <p class="muted">We refine the design based on your feedback until it’s ready to lodge/build.</p>
+        </div>
+
+        <div class="card">
+          <div class="step__num">04</div>
+          <h3>Council Ready</h3>
+          <p class="muted">Final drawings delivered ready for submission and construction coordination.</p>
+        </div>
       </div>
 
-      <div class="card card--service">
-        <img class="service-img" src="assets/council.jpg" alt="Council approval drawings" />
-        <h3>Council Approval Drawings</h3>
-        <p>Documentation prepared to support smooth council approvals.</p>
-        <a href="#contact">Request a quote →</a>
+      <div style="margin-top:20px;">
+        <a class="btn btn--primary" href="#contact">Start Your Project</a>
+      </div>
+    </section>
+
+    <!-- =========================
+         PORTFOLIO (4 tiles like reference)
+         ========================= -->
+    <section id="portfolio" class="container section">
+      <div style="display:flex; align-items:flex-end; justify-content:space-between; gap:12px; flex-wrap:wrap;">
+        <div>
+          <h2 style="margin-bottom:10px;">Recent Projects</h2>
+          <p class="muted" style="max-width:760px;">
+            Residential and commercial documentation delivered across Australia.
+          </p>
+        </div>
+        <a class="btn btn--ghost" href="#contact">View Full Gallery →</a>
       </div>
 
-      <div class="card card--service">
-        <img class="service-img" src="assets/redlineplan.jpg" alt="Town planning and permit drawings" />
-        <h3>Town Planning & Permit Drawings</h3>
-        <p>Existing and proposed drawings aligned with council requirements.</p>
-        <a href="#contact">Talk to us →</a>
+      <div class="grid grid--4" style="margin-top:24px;">
+        <div class="card card--service">
+          <img src="assets/redlineplan.jpg" alt="Red Line Plans" class="service-img" />
+          <h3>Red Line Plans</h3>
+          <p class="muted">Precise markups and technical adjustments.</p>
+          <a href="#contact">Get help →</a>
+        </div>
+
+        <div class="card card--service">
+          <img src="assets/council.jpg" alt="Council Approval Plans" class="service-img" />
+          <h3>Council Approval</h3>
+          <p class="muted">Extensions &amp; new builds documentation.</p>
+          <a href="#contact">Request quote →</a>
+        </div>
+
+        <div class="card card--service">
+          <img src="assets/siteplans.jpg" alt="Landscaping Plans" class="service-img" />
+          <h3>Landscaping Plans</h3>
+          <p class="muted">Outdoor and site design documentation.</p>
+          <a href="#contact">Talk to us →</a>
+        </div>
+
+        <div class="card card--service">
+          <img src="assets/hero.jpg" alt="Commercial Plans" class="service-img" />
+          <h3>Commercial Plans</h3>
+          <p class="muted">Fitouts and technical commercial layouts.</p>
+          <a href="#contact">Enquire →</a>
+        </div>
       </div>
+    </section>
 
-      <div class="card card--service">
-        <img class="service-img" src="assets/hero.jpg" alt="3D renders" />
-        <h3>3D Renders</h3>
-        <p>Visuals that help clients understand and approve designs faster.</p>
-        <a href="#contact">View options →</a>
+    <!-- =========================
+         ABOUT
+         ========================= -->
+    <section id="about" class="container section">
+      <div class="grid" style="grid-template-columns: 1.1fr .9fr; gap:24px; align-items:center;">
+        <div class="card">
+          <h2>Small Boutique Company, Big Experience</h2>
+          <p class="muted">
+            We are a boutique drafting and design team with 5+ years of experience across
+            residential and commercial projects. We specialize in council-ready documentation,
+            clear communication, and fast turnaround.
+          </p>
+          <p class="muted">
+            We don’t just draw — we consult, design, and help you navigate planning requirements
+            so you can move forward with confidence.
+          </p>
+          <div style="margin-top:14px;">
+            <a class="btn btn--primary" href="#contact">Talk to Our Drafting Team</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="assets/hero.jpg" alt="Arya Designs project showcase" style="width:100%; height:360px; object-fit:cover; border-radius:14px; border:1px solid var(--border);" />
+          <div class="hero__meta" style="margin-top:12px;">
+            <span class="meta-pill">AUS owned</span>
+            <span class="meta-pill">Council-focused</span>
+            <span class="meta-pill">Fast response</span>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="card card--service">
-        <img class="service-img" src="assets/siteplans.jpg" alt="Site and landscape plans" />
-        <h3>Site & Landscape Plans</h3>
-        <p>Setbacks, boundaries, context and landscape layouts.</p>
-        <a href="#contact">Get started →</a>
+    <!-- =========================
+         CONTACT / QUOTE FORM (Formspree)
+         ========================= -->
+    <section id="contact" class="container section">
+      <div class="grid" style="grid-template-columns: 1fr 1fr; gap:24px; align-items:start;">
+        <div class="card">
+          <h2>Get a Free Quote</h2>
+          <p class="muted">
+            Fill out the form and we’ll get back to you within 24 hours with a detailed estimate.
+          </p>
+
+          <div style="margin-top:16px;">
+            <p><b>Email</b><br><a href="mailto:aryadesignsaus@gmail.com">aryadesignsaus@gmail.com</a></p>
+            <p style="margin-top:10px;"><b>Phone</b><br><a href="tel:0472611972">0472 611 972</a></p>
+            <p style="margin-top:10px;"><b>Service Areas</b><br><span class="muted">Sydney, Melbourne, Brisbane &amp; Surrounds</span></p>
+          </div>
+
+          <div class="hero__cta" style="margin-top:14px;">
+            <a class="btn btn--ghost" href="tel:0472611972">Call Now</a>
+            <a class="btn btn--ghost" target="_blank" rel="noopener" href="https://wa.me/61472611972">WhatsApp</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <form class="form" action="https://formspree.io/f/xwvvpjww" method="POST">
+            <input type="text" name="name" placeholder="Name *" required>
+            <input type="email" name="email" placeholder="Email *" required>
+            <input type="text" name="location" placeholder="Project Location">
+
+            <select name="service">
+              <option value="">Service Required</option>
+              <option>Council Approval Drawings</option>
+              <option>Town Planning & Permits</option>
+              <option>Working Drawings for Construction</option>
+              <option>3D Renders</option>
+              <option>Site & Landscape Plans</option>
+              <option>Floor Plans</option>
+              <option>Other</option>
+            </select>
+
+            <textarea name="message" placeholder="Project Description *" required></textarea>
+
+            <button class="btn btn--primary" type="submit">Get a Free Quote</button>
+            <p class="muted" style="margin-top:10px; font-size:.95rem;">
+              By submitting, you agree to be contacted about your enquiry.
+            </p>
+          </form>
+        </div>
       </div>
+    </section>
 
-      <div class="card card--service">
-        <img class="service-img" src="assets/redlineplan.jpg" alt="Working drawings for construction" />
-        <h3>Working Drawings for Construction</h3>
-        <p>Detailed drawings to help builders build accurately.</p>
-        <a href="#contact">Request a quote →</a>
-      </div>
-    </div>
-  </section>
+    <footer class="container footer">
+      <div style="margin-bottom:10px; font-weight:800;">ARYA DESIGNS</div>
+      <div class="muted">Boutique drafting &amp; design. Australian owned and operated.</div>
+      <div class="muted" style="margin-top:8px;">© <span id="year"></span> Arya Designs. All rights reserved.</div>
+    </footer>
+  </main>
 
-  <!-- PROCESS -->
-  <section id="process" class="section">
-    <h2>How It Works</h2>
-
-    <div class="grid grid--4">
-      <div class="card step">
-        <div class="step__num">01</div>
-        <h3>Send Info</h3>
-        <p>Plans, photos, address & timeline.</p>
-      </div>
-      <div class="card step">
-        <div class="step__num">02</div>
-        <h3>Quote</h3>
-        <p>Clear scope & turnaround confirmed.</p>
-      </div>
-      <div class="card step">
-        <div class="step__num">03</div>
-        <h3>Draft</h3>
-        <p>First draft + revisions.</p>
-      </div>
-      <div class="card step">
-        <div class="step__num">04</div>
-        <h3>Deliver</h3>
-        <p>Final council / construction set.</p>
-      </div>
-    </div>
-
-    <div style="margin-top:14px;">
-      <a class="btn btn--primary" href="#contact">Request a Quote</a>
-      <a class="btn btn--ghost" href="tel:+61472611972">Call Now</a>
-      <a class="btn btn--ghost" href="https://wa.me/61472611972" target="_blank" rel="noopener">WhatsApp</a>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="section">
-    <h2>Request a Quote</h2>
-    <p class="muted">Tell us about your project and we’ll get back to you quickly.</p>
-
-    <form class="card form" action="https://formspree.io/f/xwvvpjww" method="POST">
-      <input name="name" placeholder="Your name" required />
-      <input name="email" type="email" placeholder="Your email" required />
-
-      <select name="service" required>
-        <option value="">Select service</option>
-        <option>Floor Plans</option>
-        <option>Council Approval Drawings</option>
-        <option>Town Planning & Permit Drawings</option>
-        <option>3D Renders</option>
-        <option>Site & Landscape Plans</option>
-        <option>Working Drawings for Construction</option>
-        <option>Not sure (recommend for me)</option>
-      </select>
-
-      <textarea name="message" placeholder="Project details, suburb & timeline" required></textarea>
-
-      <button class="btn btn--primary" type="submit">Send Enquiry</button>
-
-      <p class="fineprint" style="margin-top:10px;">
-        Or contact us directly:
-        <a href="tel:+61472611972">0472 611 972</a> •
-        <a href="https://wa.me/61472611972" target="_blank" rel="noopener">WhatsApp</a> •
-        <a href="mailto:arysdesignsaus@gmail.com">arysdesignsaus@gmail.com</a>
-      </p>
-    </form>
-  </section>
-
-  <footer class="footer">
-    <p>© <span id="year"></span> Arya Designs</p>
-  </footer>
-
-</main>
-
-<!-- FLOATING CTA (Desktop) -->
-<div class="cta-fixed">
-  <a class="cta-btn cta-call" href="tel:+61472611972">📞 Call 0472 611 972</a>
-  <a class="cta-btn cta-wa" href="https://wa.me/61472611972" target="_blank" rel="noopener">💬 WhatsApp</a>
-</div>
-
-<!-- MOBILE CTA BAR -->
-<div class="cta-bottom">
-  <a class="call" href="tel:+61472611972">📞 Call</a>
-  <a class="wa" href="https://wa.me/61472611972" target="_blank" rel="noopener">💬 WhatsApp</a>
-</div>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
