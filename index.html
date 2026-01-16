@@ -30,7 +30,7 @@
       justify-content: center;
       padding: 14px 18px;
       border-radius: 999px;
-      font-weight: 700;
+      font-weight: 800;
       font-size: 14px;
       color: #fff;
       text-decoration: none;
@@ -45,14 +45,13 @@
       left: 0;
       right: 0;
       display: none;
-      gap: 0;
       z-index: 9998;
     }
     .cta-bottom a {
       flex: 1;
       text-align: center;
       padding: 16px;
-      font-weight: 800;
+      font-weight: 900;
       color: #fff;
       text-decoration: none;
     }
@@ -93,20 +92,25 @@
       <p class="eyebrow">DRAFTING • COUNCIL • PERMITS • 3D</p>
       <h1>Clear drawings.<br>Faster approvals.</h1>
       <p class="lead">
-        We help homeowners, builders and developers move projects forward
-        with accurate, council-ready documentation.
+        We help homeowners, builders and developers move projects forward with accurate, council-ready documentation.
       </p>
 
       <div class="hero__cta">
         <a class="btn btn--primary" href="#contact">Request a Quote</a>
-        <a class="btn btn--ghost" href="tel:DISPLAY_PHONE">Call Now</a>
+        <a class="btn btn--ghost" href="tel:+61472611972">Call 0472 611 972</a>
+        <a class="btn btn--ghost" href="https://wa.me/61472611972" target="_blank">WhatsApp</a>
       </div>
 
       <div class="hero__meta">
         <div class="meta-pill">Fast turnaround</div>
-        <div class="meta-pill">Council-ready sets</div>
+        <div class="meta-pill">Council-ready drawings</div>
         <div class="meta-pill">Revisions included</div>
       </div>
+
+      <p style="margin-top:14px;">
+        Email us at
+        <a href="mailto:arysdesignsaus@gmail.com"><strong>arysdesignsaus@gmail.com</strong></a>
+      </p>
     </div>
   </section>
 
@@ -117,19 +121,19 @@
     <div class="grid grid--3">
       <div class="card card--service">
         <h3>Floor Plans</h3>
-        <p>Accurate plans that clearly communicate layout, dimensions and intent.</p>
+        <p>Clear, accurate floor plans that communicate layout and intent.</p>
         <a href="#contact">Get pricing →</a>
       </div>
 
       <div class="card card--service">
         <h3>Council Approval Drawings</h3>
-        <p>Documentation prepared to support planning submissions.</p>
+        <p>Documentation prepared to support smooth council approvals.</p>
         <a href="#contact">Request a quote →</a>
       </div>
 
       <div class="card card--service">
         <h3>Town Planning & Permit Drawings</h3>
-        <p>Existing & proposed sets aligned with council requirements.</p>
+        <p>Existing and proposed drawings aligned with council requirements.</p>
         <a href="#contact">Talk to us →</a>
       </div>
 
@@ -184,11 +188,11 @@
   <!-- CONTACT -->
   <section id="contact" class="section">
     <h2>Request a Quote</h2>
-    <p class="muted">Tell us about your project and we’ll respond quickly.</p>
+    <p class="muted">Tell us about your project and we’ll get back to you quickly.</p>
 
-    <form class="card form" action="https://formspree.io/f/yourFormId" method="POST">
+    <form class="card form" action="https://formspree.io/f/xwvvpjww" method="POST">
       <input name="name" placeholder="Your name" required />
-      <input name="email" placeholder="Your email" required />
+      <input name="email" type="email" placeholder="Your email" required />
       <select name="service" required>
         <option value="">Select service</option>
         <option>Floor Plans</option>
@@ -196,10 +200,19 @@
         <option>Town Planning & Permit Drawings</option>
         <option>3D Renders</option>
         <option>Site & Landscape Plans</option>
-        <option>Working Drawings</option>
+        <option>Working Drawings for Construction</option>
+        <option>Not sure (recommend for me)</option>
       </select>
       <textarea name="message" placeholder="Project details, suburb & timeline" required></textarea>
-      <button class="btn btn--primary">Send Enquiry</button>
+
+      <button class="btn btn--primary" type="submit">Send Enquiry</button>
+
+      <p class="fineprint" style="margin-top:10px;">
+        Or contact us directly:
+        <a href="tel:+61472611972">0472 611 972</a> •
+        <a href="https://wa.me/61472611972" target="_blank">WhatsApp</a> •
+        <a href="mailto:arysdesignsaus@gmail.com">arysdesignsaus@gmail.com</a>
+      </p>
     </form>
   </section>
 
@@ -209,16 +222,16 @@
 
 </main>
 
-<!-- FLOATING CTA -->
+<!-- FLOATING CTA (Desktop) -->
 <div class="cta-fixed">
-  <a class="cta-btn cta-call" href="tel:DISPLAY_PHONE">📞 Call Now</a>
-  <a class="cta-btn cta-wa" href="https://wa.me/PHONE_NUMBER_HERE" target="_blank">💬 WhatsApp</a>
+  <a class="cta-btn cta-call" href="tel:+61472611972">📞 Call 0472 611 972</a>
+  <a class="cta-btn cta-wa" href="https://wa.me/61472611972" target="_blank">💬 WhatsApp</a>
 </div>
 
 <!-- MOBILE CTA BAR -->
 <div class="cta-bottom">
-  <a class="call" href="tel:DISPLAY_PHONE">📞 Call</a>
-  <a class="wa" href="https://wa.me/PHONE_NUMBER_HERE" target="_blank">💬 WhatsApp</a>
+  <a class="call" href="tel:+61472611972">📞 Call</a>
+  <a class="wa" href="https://wa.me/61472611972" target="_blank">💬 WhatsApp</a>
 </div>
 
 <script src="script.js"></script>
