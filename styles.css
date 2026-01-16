@@ -203,7 +203,7 @@ p { margin: 0 0 12px; }
 
 .hero__visual img {
   width: 100%;
-  height: 360px;
+  height: 300px;
   object-fit: cover;
   display: block;
 }
@@ -332,3 +332,4 @@ p { margin: 0 0 12px; }
   .nav { display: none; }
   .hero { padding: 32px; }
 }
+
