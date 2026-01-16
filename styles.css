@@ -12,9 +12,9 @@
   --radius: 16px;
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
@@ -23,6 +23,8 @@ body {
   color: var(--text);
   line-height: 1.6;
 }
+
+a { color: inherit; }
 
 /* =========================
    LAYOUT
@@ -34,13 +36,9 @@ body {
   padding: 24px;
 }
 
-.section {
-  margin-top: 80px;
-}
+.section { margin-top: 80px; }
 
-h1, h2, h3 {
-  line-height: 1.2;
-}
+h1, h2, h3 { line-height: 1.2; }
 
 h1 {
   font-size: clamp(2.4rem, 5vw, 3.4rem);
@@ -57,13 +55,9 @@ h3 {
   margin-bottom: 8px;
 }
 
-p {
-  margin: 0 0 12px;
-}
+p { margin: 0 0 12px; }
 
-.muted {
-  color: var(--muted);
-}
+.muted { color: var(--muted); }
 
 /* =========================
    HEADER
@@ -81,6 +75,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 16px;
 }
 
 .brand {
@@ -111,9 +106,7 @@ p {
   font-weight: 600;
 }
 
-.nav a:hover {
-  text-decoration: underline;
-}
+.nav a:hover { text-decoration: underline; }
 
 /* =========================
    BUTTONS / CTA
@@ -122,12 +115,14 @@ p {
 .btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   padding: 14px 20px;
   border-radius: 999px;
-  font-weight: 700;
+  font-weight: 800;
   text-decoration: none;
   border: 2px solid transparent;
+  transition: transform .15s ease, opacity .15s ease;
 }
 
 .btn--primary {
@@ -138,10 +133,12 @@ p {
 .btn--ghost {
   border-color: var(--border);
   color: var(--text);
+  background: #fff;
 }
 
 .btn:hover {
-  opacity: 0.9;
+  opacity: 0.95;
+  transform: translateY(-1px);
 }
 
 /* =========================
@@ -155,34 +152,60 @@ p {
 }
 
 .eyebrow {
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0.08em;
   color: var(--muted);
+  text-transform: uppercase;
+  font-size: 0.85rem;
 }
 
 .lead {
   font-size: 1.1rem;
-  max-width: 600px;
+  max-width: 620px;
 }
 
 .hero__cta {
   display: flex;
-  gap: 16px;
+  gap: 12px;
   flex-wrap: wrap;
+  margin-top: 6px;
 }
 
 .hero__meta {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
+  margin-top: 6px;
 }
 
 .meta-pill {
   padding: 8px 14px;
   background: var(--bg);
   border-radius: 999px;
-  font-weight: 600;
+  font-weight: 700;
   border: 1px solid var(--border);
+}
+
+/* ✅ HERO SPLIT + IMAGE */
+.hero--split {
+  grid-template-columns: 1.25fr 1fr;
+  align-items: center;
+  gap: 28px;
+}
+
+.hero__visual {
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: #fff;
+  box-shadow: 0 14px 40px rgba(15,23,42,.08);
+}
+
+.hero__visual img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  display: block;
 }
 
 /* =========================
@@ -194,22 +217,37 @@ p {
   border-radius: var(--radius);
   padding: 32px;
   border: 1px solid var(--border);
+  box-shadow: 0 14px 40px rgba(15,23,42,.06);
 }
 
 .card--service {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.card--service:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 55px rgba(15,23,42,.10);
 }
 
 .card--service a {
-  font-weight: 700;
+  font-weight: 800;
   text-decoration: none;
   color: var(--primary);
 }
 
-.card--service a:hover {
-  text-decoration: underline;
+.card--service a:hover { text-decoration: underline; }
+
+/* ✅ SERVICE IMAGES */
+.service-img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  margin-bottom: 8px;
 }
 
 /* =========================
@@ -235,7 +273,7 @@ p {
 
 .step__num {
   font-size: 2rem;
-  font-weight: 800;
+  font-weight: 900;
   color: var(--primary);
   margin-bottom: 8px;
 }
@@ -244,9 +282,7 @@ p {
    FORM
    ========================= */
 
-.form {
-  max-width: 520px;
-}
+.form { max-width: 520px; }
 
 .form input,
 .form select,
@@ -257,6 +293,13 @@ p {
   border: 1px solid var(--border);
   font-size: 1rem;
   margin-bottom: 14px;
+  outline: none;
+}
+
+.form input:focus,
+.form select:focus,
+.form textarea:focus {
+  border-color: rgba(15,23,42,.35);
 }
 
 .form textarea {
@@ -264,9 +307,7 @@ p {
   resize: vertical;
 }
 
-.form button {
-  width: 100%;
-}
+.form button { width: 100%; }
 
 /* =========================
    FOOTER
@@ -282,11 +323,12 @@ p {
    RESPONSIVE
    ========================= */
 
+@media (max-width: 900px) {
+  .hero--split { grid-template-columns: 1fr; }
+  .hero__visual img { height: 260px; }
+}
+
 @media (max-width: 768px) {
-  .nav {
-    display: none;
-  }
-  .hero {
-    padding: 32px;
-  }
+  .nav { display: none; }
+  .hero { padding: 32px; }
 }
