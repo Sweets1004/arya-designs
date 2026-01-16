@@ -86,9 +86,9 @@
 
 <main class="container">
 
-  <!-- HERO -->
-  <section class="hero card">
-    <div>
+  <!-- HERO (Split layout with image) -->
+  <section class="hero hero--split card">
+    <div class="hero__content">
       <p class="eyebrow">DRAFTING • COUNCIL • PERMITS • 3D</p>
       <h1>Clear drawings.<br>Faster approvals.</h1>
       <p class="lead">
@@ -98,7 +98,7 @@
       <div class="hero__cta">
         <a class="btn btn--primary" href="#contact">Request a Quote</a>
         <a class="btn btn--ghost" href="tel:+61472611972">Call 0472 611 972</a>
-        <a class="btn btn--ghost" href="https://wa.me/61472611972" target="_blank">WhatsApp</a>
+        <a class="btn btn--ghost" href="https://wa.me/61472611972" target="_blank" rel="noopener">WhatsApp</a>
       </div>
 
       <div class="hero__meta">
@@ -108,9 +108,13 @@
       </div>
 
       <p style="margin-top:14px;">
-        Email us at
+        Prefer email?
         <a href="mailto:arysdesignsaus@gmail.com"><strong>arysdesignsaus@gmail.com</strong></a>
       </p>
+    </div>
+
+    <div class="hero__visual">
+      <img src="assets/hero.jpg" alt="Arya Designs drafting and design visuals" />
     </div>
   </section>
 
@@ -120,36 +124,42 @@
 
     <div class="grid grid--3">
       <div class="card card--service">
+        <img class="service-img" src="assets/floorplans.jpg" alt="Floor plans" />
         <h3>Floor Plans</h3>
         <p>Clear, accurate floor plans that communicate layout and intent.</p>
         <a href="#contact">Get pricing →</a>
       </div>
 
       <div class="card card--service">
+        <img class="service-img" src="assets/council.jpg" alt="Council approval drawings" />
         <h3>Council Approval Drawings</h3>
         <p>Documentation prepared to support smooth council approvals.</p>
         <a href="#contact">Request a quote →</a>
       </div>
 
       <div class="card card--service">
+        <img class="service-img" src="assets/redlineplan.jpg" alt="Town planning and permit drawings" />
         <h3>Town Planning & Permit Drawings</h3>
         <p>Existing and proposed drawings aligned with council requirements.</p>
         <a href="#contact">Talk to us →</a>
       </div>
 
       <div class="card card--service">
+        <img class="service-img" src="assets/hero.jpg" alt="3D renders" />
         <h3>3D Renders</h3>
         <p>Visuals that help clients understand and approve designs faster.</p>
         <a href="#contact">View options →</a>
       </div>
 
       <div class="card card--service">
+        <img class="service-img" src="assets/siteplans.jpg" alt="Site and landscape plans" />
         <h3>Site & Landscape Plans</h3>
         <p>Setbacks, boundaries, context and landscape layouts.</p>
         <a href="#contact">Get started →</a>
       </div>
 
       <div class="card card--service">
+        <img class="service-img" src="assets/redlineplan.jpg" alt="Working drawings for construction" />
         <h3>Working Drawings for Construction</h3>
         <p>Detailed drawings to help builders build accurately.</p>
         <a href="#contact">Request a quote →</a>
@@ -183,6 +193,12 @@
         <p>Final council / construction set.</p>
       </div>
     </div>
+
+    <div style="margin-top:14px;">
+      <a class="btn btn--primary" href="#contact">Request a Quote</a>
+      <a class="btn btn--ghost" href="tel:+61472611972">Call Now</a>
+      <a class="btn btn--ghost" href="https://wa.me/61472611972" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
   </section>
 
   <!-- CONTACT -->
@@ -193,6 +209,7 @@
     <form class="card form" action="https://formspree.io/f/xwvvpjww" method="POST">
       <input name="name" placeholder="Your name" required />
       <input name="email" type="email" placeholder="Your email" required />
+
       <select name="service" required>
         <option value="">Select service</option>
         <option>Floor Plans</option>
@@ -203,6 +220,7 @@
         <option>Working Drawings for Construction</option>
         <option>Not sure (recommend for me)</option>
       </select>
+
       <textarea name="message" placeholder="Project details, suburb & timeline" required></textarea>
 
       <button class="btn btn--primary" type="submit">Send Enquiry</button>
@@ -210,7 +228,7 @@
       <p class="fineprint" style="margin-top:10px;">
         Or contact us directly:
         <a href="tel:+61472611972">0472 611 972</a> •
-        <a href="https://wa.me/61472611972" target="_blank">WhatsApp</a> •
+        <a href="https://wa.me/61472611972" target="_blank" rel="noopener">WhatsApp</a> •
         <a href="mailto:arysdesignsaus@gmail.com">arysdesignsaus@gmail.com</a>
       </p>
     </form>
@@ -225,13 +243,13 @@
 <!-- FLOATING CTA (Desktop) -->
 <div class="cta-fixed">
   <a class="cta-btn cta-call" href="tel:+61472611972">📞 Call 0472 611 972</a>
-  <a class="cta-btn cta-wa" href="https://wa.me/61472611972" target="_blank">💬 WhatsApp</a>
+  <a class="cta-btn cta-wa" href="https://wa.me/61472611972" target="_blank" rel="noopener">💬 WhatsApp</a>
 </div>
 
 <!-- MOBILE CTA BAR -->
 <div class="cta-bottom">
   <a class="call" href="tel:+61472611972">📞 Call</a>
-  <a class="wa" href="https://wa.me/61472611972" target="_blank">💬 WhatsApp</a>
+  <a class="wa" href="https://wa.me/61472611972" target="_blank" rel="noopener">💬 WhatsApp</a>
 </div>
 
 <script src="script.js"></script>
