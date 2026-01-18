@@ -414,5 +414,84 @@ p { margin: 0 0 12px; }
   border: 1px solid #fb718533;
   color: #9f1239;
 }
+/* =========================
+   HERO – CLEAN SUBCTA (NEW)
+   ========================= */
+
+.hero__subcta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.trust {
+  font-weight: 800;
+  font-size: 0.98rem;
+  color: var(--text);
+  background: #fff;
+  border: 1px solid var(--border);
+  padding: 10px 14px;
+  border-radius: 999px;
+}
+
+.muted-link {
+  color: var(--muted);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.muted-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.hero__mini {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.mini-link {
+  font-weight: 800;
+  color: var(--text);
+  text-decoration: none;
+  background: #fff;
+  border: 1px solid var(--border);
+  padding: 10px 14px;
+  border-radius: 999px;
+  transition: transform .15s ease, opacity .15s ease;
+}
+
+.mini-link:hover {
+  transform: translateY(-1px);
+  opacity: 0.95;
+}
+
+.dot {
+  color: var(--muted);
+  font-weight: 900;
+}
+
+/* Make hero CTAs look like the reference */
+.hero__cta .btn {
+  padding: 14px 22px;
+}
+
+/* Small screen spacing */
+@media (max-width: 768px) {
+  .hero__subcta,
+  .hero__mini {
+    gap: 8px;
+  }
+  .trust,
+  .mini-link {
+    width: fit-content;
+  }
+}
+
 
 
