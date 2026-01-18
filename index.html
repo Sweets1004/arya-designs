@@ -1,3 +1,4 @@
+```html
 <!doctype html>
 <html lang="en">
 <head>
@@ -6,7 +7,7 @@
   <title>Arya Designs | Drafting, Council & Permit Drawings</title>
   <meta name="description" content="Boutique drafting services for Australian homeowners and builders — council-ready plans, fast turnaround, compliant documentation, 3D renders and working drawings." />
 
-  <!-- Font (optional but nice) -->
+  <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
@@ -14,71 +15,92 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 
-<body>
+<body id="top">
   <!-- =========================
-       TOP BAR
+       TOP BAR (logo alignment + centered nav)
        ========================= -->
   <header class="topbar">
-    <div class="container topbar__inner">
-      <div class="brand">
+    <div class="container topbar__inner topbar__grid" style="position:relative;">
+      <!-- LEFT: Brand -->
+      <a class="brand" href="#top" aria-label="Arya Designs home" style="text-decoration:none;">
         <div class="brand__mark">A</div>
-        <span>ARYA DESIGNS</span>
-      </div>
+        <span style="font-weight:900; letter-spacing:.01em;">ARYA <span style="font-weight:900;">DESIGNS</span></span>
+      </a>
 
-      <nav class="nav" aria-label="Primary navigation">
+      <!-- CENTER: Nav -->
+      <nav class="nav nav--center" aria-label="Primary navigation">
         <a href="#services">Services</a>
         <a href="#process">Process</a>
         <a href="#portfolio">Portfolio</a>
         <a href="#about">About</a>
       </nav>
 
-      <a class="btn btn--primary" href="#contact">Get a Quote</a>
+      <!-- RIGHT: CTA -->
+      <div class="topbar__right">
+        <a class="btn btn--primary" href="#contact">Get a Quote</a>
+      </div>
     </div>
   </header>
 
   <main>
     <!-- =========================
-         HERO (CLEAN + CTA FORWARD)
+         HERO (clean CTA-forward + compliance badge)
          ========================= -->
     <section class="container section" style="margin-top:32px;">
       <div class="card hero hero--split">
         <div>
           <div class="eyebrow">DRAFTING • COUNCIL • PERMITS • 3D</div>
 
-          <h1>
+          <!-- Match “big, airy” headline feel -->
+          <h1 style="font-weight:900; letter-spacing:-0.02em; margin-top:12px;">
             Precision Drafting for<br />
             Australian Builders &amp;<br />
-            Homeowners
+            <span style="color:var(--primary);">Homeowners</span>
           </h1>
 
-          <p class="lead muted">
+          <p class="lead muted" style="max-width:560px; margin-top:14px;">
             Council-ready plans, fast turnarounds, and compliant documentation.
             From renovations to new builds, we bring your vision to technical life.
           </p>
 
-          <!-- Primary CTA (ONLY 2 buttons) -->
-          <div class="hero__cta">
+          <!-- ONLY 2 buttons (as requested) -->
+          <div class="hero__cta" style="margin-top:18px;">
             <a class="btn btn--primary" href="#contact">Get a Free Quote</a>
             <a class="btn btn--ghost" href="#portfolio">View Our Work</a>
           </div>
 
-          <!-- Clean trust line + email -->
-          <div class="hero__subcta">
-            <span class="trust">Council-ready • Fast turnaround • Revisions included</span>
-            <span class="dot">•</span>
-            <a class="muted-link" href="mailto:aryadesignsaus@gmail.com">aryadesignsaus@gmail.com</a>
-          </div>
-
-          <!-- Small secondary actions (optional but clean) -->
-          <div class="hero__mini">
-            <a class="mini-link" href="tel:0472611972">Call 0472 611 972</a>
-            <span class="dot">•</span>
-            <a class="mini-link" target="_blank" rel="noopener" href="https://wa.me/61472611972">WhatsApp</a>
-          </div>
+          <!-- One clean trust line (no “yellow box” clutter) -->
+          <p class="muted" style="margin-top:14px; font-weight:700;">
+            Council-ready • Fast turnaround • Revisions included
+            <span style="opacity:.6;"> • </span>
+            <a href="mailto:aryadesignsaus@gmail.com" style="font-weight:800; text-decoration:underline; text-underline-offset:4px;">
+              aryadesignsaus@gmail.com
+            </a>
+          </p>
         </div>
 
-        <div class="hero__visual" aria-label="Hero project image">
+        <div class="hero__visual" aria-label="Hero project image" style="position:relative;">
           <img src="assets/hero.jpg" alt="Modern Australian home design render" />
+
+          <!-- Compliance badge (bottom-left overlay) -->
+          <div class="compliance-badge" style="
+            position:absolute;
+            left:18px;
+            bottom:18px;
+            background:#fff;
+            border:1px solid var(--border);
+            border-radius:16px;
+            padding:14px 16px;
+            box-shadow: 0 18px 55px rgba(15,23,42,.12);
+            min-width: 220px;
+          ">
+            <div style="font-weight:900; font-size:1.8rem; line-height:1; letter-spacing:-0.02em;">
+              100%
+            </div>
+            <div class="muted" style="font-weight:800; margin-top:6px;">
+              Council Compliance Rate
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -139,7 +161,7 @@
     </section>
 
     <!-- =========================
-         PROCESS (4-step workflow)
+         PROCESS
          ========================= -->
     <section id="process" class="container section">
       <h2>Our Simple 4-Step Workflow</h2>
@@ -179,7 +201,7 @@
     </section>
 
     <!-- =========================
-         PORTFOLIO (4 tiles like reference)
+         PORTFOLIO (add hover class hooks)
          ========================= -->
     <section id="portfolio" class="container section">
       <div style="display:flex; align-items:flex-end; justify-content:space-between; gap:12px; flex-wrap:wrap;">
@@ -193,28 +215,28 @@
       </div>
 
       <div class="grid grid--4" style="margin-top:24px;">
-        <div class="card card--service">
+        <div class="card card--service portfolio-card">
           <img src="assets/redlineplan.jpg" alt="Red Line Plans" class="service-img" />
           <h3>Red Line Plans</h3>
           <p class="muted">Precise markups and technical adjustments.</p>
           <a href="#contact">Get help →</a>
         </div>
 
-        <div class="card card--service">
+        <div class="card card--service portfolio-card">
           <img src="assets/council.jpg" alt="Council Approval Plans" class="service-img" />
           <h3>Council Approval</h3>
           <p class="muted">Extensions &amp; new builds documentation.</p>
           <a href="#contact">Request quote →</a>
         </div>
 
-        <div class="card card--service">
+        <div class="card card--service portfolio-card">
           <img src="assets/siteplans.jpg" alt="Landscaping Plans" class="service-img" />
           <h3>Landscaping Plans</h3>
           <p class="muted">Outdoor and site design documentation.</p>
           <a href="#contact">Talk to us →</a>
         </div>
 
-        <div class="card card--service">
+        <div class="card card--service portfolio-card">
           <img src="assets/hero.jpg" alt="Commercial Plans" class="service-img" />
           <h3>Commercial Plans</h3>
           <p class="muted">Fitouts and technical commercial layouts.</p>
@@ -307,7 +329,7 @@
     </section>
 
     <footer class="container footer">
-      <div style="margin-bottom:10px; font-weight:800;">ARYA DESIGNS</div>
+      <div style="margin-bottom:10px; font-weight:900;">ARYA DESIGNS</div>
       <div class="muted">Boutique drafting &amp; design. Australian owned and operated.</div>
       <div class="muted" style="margin-top:8px;">© <span id="year"></span> Arya Designs. All rights reserved.</div>
     </footer>
@@ -319,3 +341,4 @@
   </script>
 </body>
 </html>
+```
