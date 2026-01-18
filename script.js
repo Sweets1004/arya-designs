@@ -30,63 +30,12 @@
     window.scrollTo({ top: y, behavior: "smooth" });
   };
 
-  $$('a[href^="#"]').forEach((a) => {
-    const href = a.getAttribute("href");
-    if (!href || href === "#") return;
-
-    a.addEventListener("click", (e) => {
-      const id = href.replace("#", "");
-      const target = document.getElementById(id);
-      if (!target) return; // allow normal if not found
-
-      e.preventDefault();
-      scrollToId(id);
-
-      // Close mobile menu if open
-      closeMobileMenu();
-    });
-  });
-
-  // ---------- Active nav highlight on scroll ----------
-  const navLinks = $$(".nav a").filter((a) => a.getAttribute("href")?.startsWith("#"));
-  const sections = navLinks
-    .map((a) => {
-      const id = a.getAttribute("href").slice(1);
-      return document.getElementById(id);
-    })
-    .filter(Boolean);
-
-  const setActiveNav = () => {
-    if (!sections.length) return;
-
-    const headerOffset = header ? header.offsetHeight + 40 : 120;
-    const scrollPos = window.scrollY + headerOffset;
-
-    let activeId = sections[0].id;
-
-    for (const sec of sections) {
-      const top = sec.offsetTop;
-      if (scrollPos >= top) activeId = sec.id;
-    }
-
-    navLinks.forEach((a) => {
-      const id = a.getAttribute("href").slice(1);
-      if (id === activeId) a.classList.add("is-active");
-      else a.classList.remove("is-active");
-    });
-  };
-
-  window.addEventListener("scroll", setActiveNav, { passive: true });
-  window.addEventListener("resize", setActiveNav);
-  setActiveNav();
-
-  // ---------- Mobile menu (optional) ----------
-  // If you don’t have a mobile toggle button yet, this script will create one automatically.
+  // ---------- Mobile menu (defined early so closeMobileMenu exists) ----------
   const nav = $(".nav");
   let mobileBtn = $("#mobileMenuBtn");
 
   function createMobileMenuButton() {
-    if (!header || !nav) return;
+    if (!header || !nav) return null;
 
     const btn = document.createElement("button");
     btn.id = "mobileMenuBtn";
@@ -96,18 +45,17 @@
     btn.setAttribute("aria-expanded", "false");
     btn.innerHTML = "☰";
 
-    // Place button before primary CTA (if present) or at end
+    const inner = $(".topbar__inner");
     const cta = $(".topbar .btn--primary");
-    if (cta && cta.parentElement) {
-      cta.parentElement.insertBefore(btn, cta);
-    } else {
-      $(".topbar__inner")?.appendChild(btn);
+    if (inner) {
+      if (cta && cta.parentElement === inner) inner.insertBefore(btn, cta);
+      else inner.appendChild(btn);
     }
 
     return btn;
   }
 
-  if (!mobileBtn) mobileBtn = createMobileMenuButton() || null;
+  if (!mobileBtn) mobileBtn = createMobileMenuButton();
 
   function openMobileMenu() {
     if (!nav || !mobileBtn) return;
@@ -136,12 +84,63 @@
 
     // Close menu if user clicks outside
     document.addEventListener("click", (e) => {
-      if (!nav.classList.contains("nav--open")) return;
+      if (!nav || !nav.classList.contains("nav--open")) return;
       const clickedInsideNav = nav.contains(e.target);
       const clickedMenuBtn = mobileBtn.contains(e.target);
       if (!clickedInsideNav && !clickedMenuBtn) closeMobileMenu();
     });
+
+    // Close menu on Escape
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && nav && nav.classList.contains("nav--open")) closeMobileMenu();
+    });
   }
+
+  // Smooth scroll handler (after closeMobileMenu exists)
+  $$('a[href^="#"]').forEach((a) => {
+    const href = a.getAttribute("href");
+    if (!href || href === "#") return;
+
+    a.addEventListener("click", (e) => {
+      const id = href.replace("#", "");
+      const target = document.getElementById(id);
+      if (!target) return; // allow normal if not found
+
+      e.preventDefault();
+      scrollToId(id);
+      closeMobileMenu();
+    });
+  });
+
+  // ---------- Active nav highlight on scroll ----------
+  const navLinks = $$(".nav a").filter((a) => a.getAttribute("href")?.startsWith("#"));
+  const sections = navLinks
+    .map((a) => document.getElementById(a.getAttribute("href").slice(1)))
+    .filter(Boolean);
+
+  const setActiveNav = () => {
+    if (!sections.length) return;
+
+    const headerOffset = header ? header.offsetHeight + 40 : 120;
+    const scrollPos = window.scrollY + headerOffset;
+
+    let activeId = sections[0].id;
+
+    for (const sec of sections) {
+      const top = sec.offsetTop;
+      if (scrollPos >= top) activeId = sec.id;
+    }
+
+    navLinks.forEach((a) => {
+      const id = a.getAttribute("href").slice(1);
+      if (id === activeId) a.classList.add("is-active");
+      else a.classList.remove("is-active");
+    });
+  };
+
+  window.addEventListener("scroll", setActiveNav, { passive: true });
+  window.addEventListener("resize", setActiveNav);
+  setActiveNav();
 
   // ---------- Scroll-to-top button ----------
   const topBtn = document.createElement("button");
@@ -196,6 +195,7 @@
 
       try {
         const formData = new FormData(form);
+
         const res = await fetch(form.action, {
           method: "POST",
           body: formData,
@@ -213,10 +213,9 @@
       } finally {
         if (submitBtn) {
           submitBtn.disabled = false;
-          submitBtn.textContent = originalText || "Send Enquiry";
+          submitBtn.textContent = originalText || "Get a Free Quote";
         }
       }
     });
   }
-
 })();
