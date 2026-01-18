@@ -492,6 +492,58 @@ p { margin: 0 0 12px; }
     width: fit-content;
   }
 }
+/* =========================
+   PORTFOLIO / CARDS – PREMIUM HOVER
+   ========================= */
+
+.card--service {
+  position: relative;
+  overflow: hidden;
+}
+
+.card--service .service-img {
+  transition: transform .35s ease, filter .35s ease;
+  will-change: transform;
+}
+
+.card--service::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(800px 260px at 20% 0%, rgba(29,78,216,.10), transparent 55%),
+              linear-gradient(to bottom, transparent 60%, rgba(15,23,42,.03));
+  opacity: 0;
+  transition: opacity .35s ease;
+  pointer-events: none;
+}
+
+.card--service:hover .service-img {
+  transform: scale(1.04);
+  filter: saturate(1.05);
+}
+
+.card--service:hover::after {
+  opacity: 1;
+}
+
+/* Button/Link nudge on hover */
+.card--service a {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  transition: transform .2s ease, opacity .2s ease;
+}
+
+.card--service:hover a {
+  transform: translateX(2px);
+}
+
+/* Softer lift (override your current hover if needed) */
+.card--service:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 70px rgba(15,23,42,.12);
+}
+
 
 
 
